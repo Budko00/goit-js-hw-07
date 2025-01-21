@@ -9,7 +9,6 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  /* Встановлено на 0 для уникнення відступів */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -17,35 +16,72 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  padding: 24px;
+
+}
+
+/* Стиль для ul (категорії) */
+#categories {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Стиль для кожного елемента item */
+.item {
+  background: #F6F6FE;
+  padding: 16px 0 0 0;
+  gap: 16px;
+  border-radius: 8px 0 0 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  margin-bottom: 16px;
+}
+
+/* Стиль для списків всередині item */
+.item>ul {
+  padding: 0;
+  list-style-type: none;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стиль для кожного елемента списку */
+.item>ul>li {
+  width: 360px;
+  height: 40px;
+  gap: 0;
+  opacity: 1;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.item>ul>li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: #000;
+
 }
 
 input {
   width: 300px;
-  /* Ширина інпуту */
   padding: 10px;
-  /* Внутрішні відступи */
   border: 1px solid #808080;
-  /* Кордон */
   border-radius: 4px;
-  /* Закруглені кути */
   margin-bottom: 20px;
-  /* Відступ знизу */
   font-size: 16px;
-  /* Розмір шрифту */
 }
 
 h1 {
   margin: 0;
-  /* Відступи */
   font-size: 24px;
-  /* Розмір шрифту для заголовка */
 }
 
 span {
   font-weight: bold;
-  /* Жирний шрифт для привітання */
   color: #333;
-  /* Колір тексту */
 }
 
 .gallery {
@@ -75,49 +111,31 @@ span {
 
 .login-form {
   width: 408px;
-  /* Ширина форми */
   height: auto;
-  /* Висота автоматично підлаштовується */
   position: relative;
-  /* Зміна на relative для позиціювання */
   margin: 20px;
-  /* Відступи для вирівнювання */
   padding: 24px;
-  /* Внутрішні відступи */
   gap: 16px;
-  /* Відстань між елементами */
   border-radius: 8px;
-  /* Згладжені кути */
   opacity: 1;
-  /* Зробити видимою */
 }
 
 .login-form label {
   display: flex;
   flex-direction: column;
-  /* Вертикальне вирівнювання label */
   gap: 8px;
-  /* Відстань між текстом і полем вводу */
 }
 
 button {
   background-color: #4E75FF;
-  /* Колір фону кнопки */
   color: white;
-  /* Колір тексту кнопки */
   border: none;
-  /* Без обведення */
   border-radius: 4px;
-  /* Згладжені кути */
   padding: 10px 16px;
-  /* Внутрішні відступи для кнопки */
   cursor: pointer;
-  /* Курсор у вигляді вказівника */
   transition: background-color 0.3s;
-  /* Анімація з переходу кольору фону */
 }
 
 button:hover {
   background-color: #6C8CFF;
-  /* Зміна кольору фону кнопки при наведені */
 }
